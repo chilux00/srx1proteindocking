@@ -5,8 +5,9 @@ Protein docking simulation of SRX1 to TSA1/2 paralogs in S. cerevisiae using Col
 ## 🧬 RoseTTAFold Local Prediction Workflow
 
 ```mermaid
-flowchart LR
-    A[FASTA sequence] --> B[Generate MSA (.a3m) via ColabFold / AlphaFold]
-    B --> C[Download .a3m alignment]
-    C --> D[Run RoseTTAFold locally with predict_complex.py]
-    D --> E[Output: Predicted structure (.pdb) + confidence (.npz)]
+flowchart TD
+    A[Input FASTA sequence] --> B[Generate MSA using ColabFold or AlphaFold]
+    B --> C[Download A3M alignment file]
+    C --> D[Run RoseTTAFold locally with predict_complex script]
+    D --> E[Output predicted structure PDB and confidence NPZ]
+```
